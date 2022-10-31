@@ -15,7 +15,7 @@
         class="my-3 py-2 px-4 rounded-lg mx-16 bg-gray-700"
         type="password"
         name=""
-        id="emailInput"
+        id="passwordInput"
         placeholder="Enter your password"
       />
       <button

@@ -17,14 +17,14 @@ const routePage = (pageName) => {
 <template>
   <div id="main-app" class="text-white bg-gray-900">
     <nav
-      class="flex flex-row justify-center py-3 border-b-2 border-gray-700 bg-gray-900 sticky top-0 z-50"
+      class="flex flex-row justify-center py-3 border-b-2 border-gray-700 bg-gray-900"
     >
       <h3 class="text-2xl">AppName</h3>
     </nav>
     <RouterView class="relative min-h-screen" />
     <footer
       v-if="currentRoute != 'login'"
-      class="flex flex-row justify-between px-16 py-4 border-t-2 border-gray-700 bg-gray-900 sticky bottom-0 z-50"
+      class="flex flex-row shadow-md justify-between px-16 py-4 border-t-2 border-gray-700 bg-gray-900 sticky bottom-0 z-50"
     >
       <font-awesome-icon
         icon="fa-solid fa-home"
