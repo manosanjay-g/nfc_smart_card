@@ -1,6 +1,6 @@
 <template>
   <div id="settings-screen" class="flex justify-center items-center">
-    <p class="bg-red-600" @click="authStore.logout">Log out</p>
+    <p class="text-red-600 cursor-pointer" @click="authStore.logout">Log out</p>
   </div>
 </template>
 

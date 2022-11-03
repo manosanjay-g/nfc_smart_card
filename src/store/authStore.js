@@ -73,6 +73,7 @@ export const useAuthStore = defineStore('root', {
             this.isLoggedIn = false;
             localStorage.removeItem("token")
             localStorage.removeItem("username")
+            router.replace('/')
         },
         checkLoginState() {
             if (localStorage.getItem('token')) {
