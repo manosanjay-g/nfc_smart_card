@@ -19,7 +19,7 @@ const routePage = (pageName) => {
     <nav
       class="flex flex-row justify-center py-3 border-b-2 border-gray-700 bg-gray-900"
     >
-      <h3 class="text-2xl">Horcrux</h3>
+      <h3 class="text-2xl">MediRX</h3>
     </nav>
     <RouterView class="relative min-h-screen" />
     <footer
