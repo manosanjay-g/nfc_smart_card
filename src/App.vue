@@ -19,7 +19,7 @@ const routePage = (pageName) => {
     <nav
       class="flex flex-row justify-center py-3 border-b-2 border-gray-700 bg-gray-900"
     >
-      <h3 class="text-2xl">AppName</h3>
+      <h3 class="text-2xl">Horcrux</h3>
     </nav>
     <RouterView class="relative min-h-screen" />
     <footer
@@ -30,6 +30,11 @@ const routePage = (pageName) => {
         icon="fa-solid fa-home"
         class="cursor-pointer text-xl hover:text-blue-700"
         @click="routePage('/')"
+      />
+      <font-awesome-icon
+        icon="fa-solid fa-wallet"
+        class="cursor-pointer text-xl hover:text-blue-700"
+        @click="routePage('/tap')"
       />
       <font-awesome-icon
         icon="fa-solid fa-add"
