@@ -15,7 +15,7 @@ const beginNFCScan = async () => {
     for (const record of event.message.records) {
       console.log("Record type:  " + record.recordType);
       console.log("MIME type:    " + record.mediaType);
-      console.log("=== data ===\n" + decoder.decode(record.data));
+      alert("=== data ===\n" + decoder.decode(record.data));
     }
   };
 };
@@ -23,7 +23,9 @@ const beginNFCScan = async () => {
 </script>
 <template>
   <div id="tap-screen" class="flex flex-col justify-center items-center">
-    <button class="px-4 py-2 bg-blue-500">Read NFC</button>
+    <button class="px-4 py-2 bg-blue-500" @click="beginScanNFC">
+      Read NFC
+    </button>
     <h3 class="my-5 font-bold">Tap on the card to begin pairing</h3>
   </div>
 </template>
