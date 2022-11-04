@@ -18,7 +18,7 @@ const beginNFCScan = async () => {
       console.log("Record type:  " + record.recordType);
       console.log("MIME type:    " + record.mediaType);
       alert("=== New Patient Detected! ===\n" + decoder.decode(record.data));
-      router.push('/user/'+decoder.decode(record.data))
+      router.push('/patient/'+decoder.decode(record.data))
     }
   };
 };
