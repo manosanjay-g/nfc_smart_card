@@ -16,6 +16,7 @@ const beginNFCScan = async () => {
       console.log("Record type:  " + record.recordType);
       console.log("MIME type:    " + record.mediaType);
       alert("=== data ===\n" + decoder.decode(record.data));
+      router.push("/user/" + record.data);
     }
   };
 };
