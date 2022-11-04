@@ -7,6 +7,8 @@ import { useAuthStore } from "../store/authStore";
 const router = useRouter();
 const route = useRoute();
 
+const data = ref("")
+
 const beginNFCScan = async () => {
   const ndef = new NDEFReader();
   await ndef.scan();
@@ -16,7 +18,7 @@ const beginNFCScan = async () => {
       console.log("Record type:  " + record.recordType);
       console.log("MIME type:    " + record.mediaType);
       alert("=== New Patient Detected! ===\n" + decoder.decode(record.data));
-      router.push("/user/" + record.data);
+      data.value = record.data
     }
   };
 };
@@ -28,5 +30,6 @@ const beginNFCScan = async () => {
       Read card
     </button>
     <h3 class="my-5 font-bold">Tap on the card to begin pairing</h3>
+    <p>{{data}}</p>
   </div>
 </template>
