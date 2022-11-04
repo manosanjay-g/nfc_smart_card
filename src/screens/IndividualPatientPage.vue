@@ -18,6 +18,18 @@ const loadUserData = async () => {
   }
 };
 
+const writeToNFC = () => {
+  const ndef = new NDEFReader();
+  ndef
+    .write(route.params.id)
+    .then(() => {
+      alert("Card is ready to use.");
+    })
+    .catch((error) => {
+      alert(`Write failed :-( try again: ${error}.`);
+    });
+};
+
 onMounted(() => {
   loadUserData();
 });
@@ -31,6 +43,9 @@ onMounted(() => {
       alt="Rounded avatar"
     />
     <h2 class="text-2xl font-medium">{{ userData.name }}</h2>
+    <button class="px-4 py-2 my-2 rounded-md bg-blue-500" @click="writeToNFC">
+      Write to card
+    </button>
     <h3 class="text-xl font-medium my-4">Personal Information</h3>
     <p><span class="font-medium">Date of birth :</span> {{ userData.dob }}</p>
     <p><span class="font-medium">City :</span> {{ userData.city }}</p>
