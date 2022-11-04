@@ -15,7 +15,7 @@ const beginNFCScan = async () => {
     for (const record of event.message.records) {
       console.log("Record type:  " + record.recordType);
       console.log("MIME type:    " + record.mediaType);
-      alert("=== data ===\n" + decoder.decode(record.data));
+      alert("=== New Patient Detected! ===\n" + decoder.decode(record.data));
       router.push("/user/" + record.data);
     }
   };
